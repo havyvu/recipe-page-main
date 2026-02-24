@@ -1,0 +1,163 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --stone100: hsl(30, 54%, 90%);
+  --stone150: hsl(30, 18%, 87%);
+  --stone600: hsl(30, 10%, 34%);
+  --stone900: hsl(24, 5%, 18%);
+  --brown800: hsl(14, 45%, 36%);
+  --rose800: hsl(332, 51%, 32%);
+  --rose50: hsl(330, 100%, 98%);
+}
+
+body {
+  background-color: var(--stone100);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  font-size: 16px;
+  color: var(--stone600);
+  font-family: "Outfit", sans-serif;
+  padding: 32px 16px;
+}
+
+.container {
+  background-color: var(--white);
+  border-radius: 10px;
+  max-width: 700px;
+  width: 100%;
+  padding: 30px;
+}
+
+.container img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+h2,
+h1 {
+  font-family: "Young Serif", serif;
+  margin-bottom: 20px;
+  color: var(--brown800);
+  font-weight: 400;
+}
+
+p {
+  line-height: 1.6;
+}
+
+ul,
+ol {
+  padding-left: 24px;
+  list-style-position: outside;
+}
+
+ul li::marker {
+  color: var(--rose800);
+}
+
+ol li::marker {
+  color: var(--brown800);
+  font-weight: 700;
+  font-family: inherit;
+}
+
+li {
+  margin-bottom: 12px;
+}
+
+.container .recipe-name {
+  color: var(--stone900);
+}
+
+.container .preparation {
+  background-color: var(--rose50);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.preparation h3 {
+  color: var(--rose800);
+  margin-bottom: 20px;
+}
+
+.instructions,
+.ingredients {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--stone150);
+}
+
+.nutrition {
+  padding-top: 20px;
+}
+
+.nutrition-table {
+  margin-top: 16px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.nutrition-table tr {
+  border-bottom: 1px solid var(--stone150);
+}
+.nutrition-table tr:last-child {
+  border-bottom: none;
+}
+
+.nutrition-table td {
+  padding: 12px 0;
+}
+
+.nutrition-table td:first-child {
+  padding-left: 24px;
+}
+
+.nutrition-table td.value {
+  font-weight: 700;
+  color: var(--brown800);
+  padding-right: 24px;
+}
+
+@media (max-width: 375px) {
+  body {
+    padding: 0;
+  }
+  .container {
+    border-radius: 0;
+    padding: 0;
+  }
+
+  .container img {
+    border-radius: 0;
+    margin-bottom: 0;
+  }
+  .container > :not(img) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .container h1 {
+    padding-top: 24px;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
